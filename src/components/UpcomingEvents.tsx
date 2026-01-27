@@ -1,7 +1,8 @@
 'use client';
 
-import { useRef } from 'react';
+import { useCallback } from 'react';
 import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import useEmblaCarousel from 'embla-carousel-react';
 
 const events = [
   {
@@ -31,17 +32,19 @@ const events = [
 ];
 
 export default function UpcomingEvents() {
-  const scrollRef = useRef<HTMLDivElement | null>(null);
+  const [emblaRef, emblaApi] = useEmblaCarousel({
+    loop: false,
+    dragFree: false,
+    containScroll: 'trimSnaps',
+  });
 
-  const scrollByCard = (direction: 'left' | 'right') => {
-    if (!scrollRef.current) return;
-    const cardWidth = scrollRef.current.firstElementChild?.clientWidth ?? 320;
-    const gap = 24;
-    scrollRef.current.scrollBy({
-      left: direction === 'left' ? -(cardWidth + gap) : cardWidth + gap,
-      behavior: 'smooth',
-    });
-  };
+  const handlePrev = useCallback(() => {
+    emblaApi?.scrollPrev();
+  }, [emblaApi]);
+
+  const handleNext = useCallback(() => {
+    emblaApi?.scrollNext();
+  }, [emblaApi]);
 
   return (
     <section className="w-full overflow-hidden bg-[#F9F7F2] py-20 sm:py-24">
@@ -55,16 +58,16 @@ export default function UpcomingEvents() {
               View All
             </button>
           </div>
-          <div className="hidden items-center gap-3 sm:flex">
+          <div className="flex items-center gap-3">
             <button
-              onClick={() => scrollByCard('left')}
+              onClick={handlePrev}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-md transition-colors hover:bg-gray-100"
               aria-label="Scroll left"
             >
               <ChevronLeft size={18} />
             </button>
             <button
-              onClick={() => scrollByCard('right')}
+              onClick={handleNext}
               className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-md transition-colors hover:bg-gray-100"
               aria-label="Scroll right"
             >
@@ -76,37 +79,38 @@ export default function UpcomingEvents() {
 
       <div className="relative mt-10">
         <div
-          ref={scrollRef}
-          className="flex snap-x snap-mandatory gap-6 overflow-x-auto pb-6 pt-2 px-4 md:px-[max(1rem,calc((100vw-1200px)/2))] [&::-webkit-scrollbar]:hidden"
-          style={{ scrollbarWidth: 'none' }}
+          ref={emblaRef}
+          className="overflow-hidden cursor-grab active:cursor-grabbing"
         >
-          {events.map((event) => (
-            <article
-              key={event.title}
-              className="group min-w-[280px] snap-start overflow-hidden rounded-2xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl sm:min-w-[320px]"
-            >
-              <div className="relative aspect-[4/3] w-full overflow-hidden">
-                <img
-                  src={event.image}
-                  alt={event.title}
-                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
-                />
-                <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gray-700 shadow-md">
-                  {event.date}
-                </span>
-              </div>
-              <div className="flex flex-col gap-4 p-6">
-                <p className="font-playfair text-2xl font-semibold text-gray-900">
-                  {event.title}
-                </p>
-                <div className="flex items-center justify-end">
-                  <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF7043] text-white shadow-md">
-                    <ArrowRight size={18} />
+          <div className="flex gap-6 px-4 md:px-[max(1rem,calc((100vw-1200px)/2))]">
+            {events.map((event) => (
+              <article
+                key={event.title}
+                className="group flex-[0_0_100%] min-w-0 overflow-hidden rounded-2xl bg-white shadow-lg transition-transform duration-300 hover:-translate-y-2 hover:shadow-xl"
+              >
+                <div className="relative aspect-[4/3] w-full overflow-hidden">
+                  <img
+                    src={event.image}
+                    alt={event.title}
+                    className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
+                  <span className="absolute left-4 top-4 rounded-full bg-white/90 px-3 py-1 text-[0.65rem] font-semibold uppercase tracking-[0.2em] text-gray-700 shadow-md">
+                    {event.date}
                   </span>
                 </div>
-              </div>
-            </article>
-          ))}
+                <div className="flex flex-col gap-4 p-6">
+                  <p className="font-playfair text-2xl font-semibold text-gray-900">
+                    {event.title}
+                  </p>
+                  <div className="flex items-center justify-end">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF7043] text-white shadow-md">
+                      <ArrowRight size={18} />
+                    </span>
+                  </div>
+                </div>
+              </article>
+            ))}
+          </div>
         </div>
       </div>
     </section>

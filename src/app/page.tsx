@@ -12,7 +12,7 @@ import VietnamCentres from '@/components/VietnamCentres';
 export default function Home() {
   return (
     <main className="relative bg-white">
-      <div className="relative z-10 mb-[400px] bg-white shadow-2xl">
+      <div className="relative z-10 mb-[520px] bg-white shadow-2xl sm:mb-[400px]">
         <Header />
         <Hero />
         <Course />
