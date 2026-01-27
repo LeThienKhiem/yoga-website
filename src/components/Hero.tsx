@@ -12,7 +12,7 @@ export default function Hero() {
         animate={{ scale: 1 }}
         transition={{ duration: 3, ease: 'easeOut' }}
         style={{
-          backgroundImage: `url('https://cdn.pixabay.com/photo/2017/09/08/18/07/sun-2729576_1280.jpg')`,
+          backgroundImage: `url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=998&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
