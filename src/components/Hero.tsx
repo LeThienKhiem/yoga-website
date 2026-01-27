@@ -12,7 +12,7 @@ export default function Hero() {
         animate={{ scale: 1 }}
         transition={{ duration: 3, ease: 'easeOut' }}
         style={{
-          backgroundImage: `url('https://images.unsplash.com/photo-1506126613408-eca07ce68773?q=80&w=2070&auto=format&fit=crop')`,
+          backgroundImage: `url('https://cdn.pixabay.com/photo/2017/09/08/18/07/sun-2729576_1280.jpg')`,
           backgroundSize: 'cover',
           backgroundPosition: 'center',
           backgroundRepeat: 'no-repeat',
@@ -37,11 +37,11 @@ export default function Hero() {
         >
           {/* Quote */}
           <h1 className="font-playfair text-5xl md:text-7xl lg:text-8xl font-light text-white mb-8 leading-tight tracking-wide">
-            "The body is your temple.
+            "Healthy is Wealth
             <br />
-            Keep it pure and clean
+            Peace of Mind is Happiness.
             <br />
-            for the soul to reside in."
+            Yoga shows the way"
           </h1>
 
           {/* Author */}
@@ -51,7 +51,7 @@ export default function Hero() {
             animate={{ opacity: 1 }}
             transition={{ duration: 1, delay: 1 }}
           >
-            — B.K.S. Iyengar
+            — Swami Vishnudevananda
           </motion.p>
 
           {/* CTA Button */}

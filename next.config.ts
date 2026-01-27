@@ -1,6 +1,14 @@
 import type { NextConfig } from 'next';
 
 const nextConfig: NextConfig = {
+  images: {
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'images.unsplash.com',
+      },
+    ],
+  },
   // Allow unsafe-eval in development for HMR (Hot Module Replacement)
   async headers() {
     // Only apply CSP in development to allow HMR

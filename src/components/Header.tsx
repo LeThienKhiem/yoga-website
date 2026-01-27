@@ -41,7 +41,7 @@ export default function Header() {
           <div className={`text-2xl font-bold font-playfair transition-colors duration-500 ${
             isScrolled ? 'text-gray-900' : 'text-white'
           }`}>
-            Zen
+            Sivananda Yoga Resort
           </div>
 
           {/* Desktop Navigation */}
