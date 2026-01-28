@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 const centres = [
   {
     title: 'Da Lat Health House',
@@ -34,11 +36,14 @@ export default function VietnamCentres() {
               key={centre.title}
               className="relative overflow-hidden rounded-2xl shadow-lg"
             >
-              <div className="relative aspect-[4/3] w-full">
-                <img
+              <div className="relative aspect-[4/3] w-full bg-stone-200">
+                <Image
                   src={centre.image}
                   alt={centre.title}
-                  className="h-full w-full object-cover"
+                  fill
+                  quality={80}
+                  sizes="(max-width: 768px) 50vw, (max-width: 1200px) 33vw, 25vw"
+                  className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/20 to-transparent" />
                 <div className="absolute inset-x-0 bottom-0 p-4">

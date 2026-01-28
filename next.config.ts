@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'images.unsplash.com',
       },
+      {
+        protocol: 'https',
+        hostname: 'bzzqbhmrbuqtlxsthfze.supabase.co',
+      },
     ],
   },
   // Allow unsafe-eval in development for HMR (Hot Module Replacement)

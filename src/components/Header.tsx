@@ -31,7 +31,7 @@ export default function Header() {
       transition={{ duration: 0.6, ease: 'easeOut' }}
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
-          ? 'bg-white/80 backdrop-blur-md shadow-sm'
+          ? 'bg-primary/95 backdrop-blur-md shadow-sm'
           : 'bg-transparent'
       }`}
     >
@@ -39,7 +39,7 @@ export default function Header() {
         <div className="flex items-center justify-between">
           {/* Logo */}
           <div className={`text-2xl font-bold font-playfair transition-colors duration-500 ${
-            isScrolled ? 'text-gray-900' : 'text-white'
+            isScrolled ? 'text-[#FEFCE8]' : 'text-white'
           }`}>
             Sivananda Yoga Resort
           </div>
@@ -51,12 +51,12 @@ export default function Header() {
                 key={link.name}
                 href={link.href}
                 className={`relative font-inter font-medium transition-colors duration-500 group ${
-                  isScrolled ? 'text-gray-900' : 'text-white'
+                  isScrolled ? 'text-[#FEFCE8]' : 'text-white'
                 }`}
               >
                 {link.name}
                 <span className={`absolute bottom-0 left-0 w-0 h-0.5 transition-all duration-300 group-hover:w-full ${
-                  isScrolled ? 'bg-gray-900' : 'bg-white'
+                  isScrolled ? 'bg-[#FEFCE8]' : 'bg-white'
                 }`} />
               </a>
             ))}
@@ -67,7 +67,7 @@ export default function Header() {
             <div className="hidden md:flex items-center gap-4">
               <button
                 className={`transition-all duration-500 hover:opacity-80 ${
-                  isScrolled ? 'text-gray-900' : 'text-white'
+                  isScrolled ? 'text-[#FEFCE8]' : 'text-white'
                 }`}
                 aria-label="Language"
               >
@@ -75,7 +75,7 @@ export default function Header() {
               </button>
               <button
                 className={`transition-all duration-500 hover:opacity-80 ${
-                  isScrolled ? 'text-gray-900' : 'text-white'
+                  isScrolled ? 'text-[#FEFCE8]' : 'text-white'
                 }`}
                 aria-label="Profile"
               >
@@ -86,7 +86,7 @@ export default function Header() {
             {/* Mobile Menu Button */}
             <button
               className={`md:hidden transition-colors duration-500 ${
-                isScrolled ? 'text-gray-900' : 'text-white'
+                isScrolled ? 'text-[#FEFCE8]' : 'text-white'
               }`}
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
               aria-label="Menu"
@@ -106,26 +106,26 @@ export default function Header() {
               transition={{ duration: 0.3 }}
               className="md:hidden overflow-hidden"
             >
-              <div className="py-4 space-y-4 bg-white/95 backdrop-blur-md rounded-lg mt-4 px-4">
+              <div className="py-4 space-y-4 bg-primary/95 backdrop-blur-md rounded-lg mt-4 px-4">
                 {navLinks.map((link) => (
                   <a
                     key={link.name}
                     href={link.href}
-                    className="block font-inter font-medium text-gray-800 hover:text-gray-600 transition-colors"
+                    className="block font-inter font-medium text-[#FEFCE8] hover:text-white/80 transition-colors"
                     onClick={() => setIsMobileMenuOpen(false)}
                   >
                     {link.name}
                   </a>
                 ))}
-                <div className="flex items-center gap-4 pt-4 border-t border-gray-200">
+                <div className="flex items-center gap-4 pt-4 border-t border-white/20">
                   <button
-                    className="text-gray-800 hover:text-gray-600 transition-colors"
+                    className="text-[#FEFCE8] hover:text-white/80 transition-colors"
                     aria-label="Language"
                   >
                     <Globe size={20} />
                   </button>
                   <button
-                    className="text-gray-800 hover:text-gray-600 transition-colors"
+                    className="text-[#FEFCE8] hover:text-white/80 transition-colors"
                     aria-label="Profile"
                   >
                     <User size={20} />

@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import Link from 'next/link';
 
 const lineageImages = [
@@ -31,12 +32,16 @@ export default function LineageSection() {
         <div className="flex flex-col gap-12 lg:grid lg:grid-cols-12 lg:items-center">
           <div className="lg:col-span-5">
             <div className="relative z-10 overflow-hidden rounded-3xl bg-white p-3 shadow-2xl">
-              <div
-                className="h-[360px] w-full rounded-2xl bg-cover bg-center grayscale sm:h-[420px]"
-                style={{ backgroundImage: `url('${lineageImages[0].url}')` }}
-                role="img"
-                aria-label={lineageImages[0].alt}
-              />
+              <div className="relative h-[360px] w-full overflow-hidden rounded-2xl sm:h-[420px]">
+                <Image
+                  src={lineageImages[0].url}
+                  alt={lineageImages[0].alt}
+                  fill
+                  quality={80}
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover grayscale"
+                />
+              </div>
             </div>
           </div>
 
@@ -63,7 +68,7 @@ export default function LineageSection() {
               </p>
               <Link
                 href="#"
-                className="mt-8 inline-flex items-center justify-center border border-[#4A6741] px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#2C3E26] transition-colors duration-300 hover:bg-[#FAFAF0]"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-6 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#FEFCE8] transition-colors duration-300 hover:bg-primary-dark"
               >
                 Learn More
               </Link>
@@ -73,22 +78,30 @@ export default function LineageSection() {
           <div className="hidden gap-6 sm:grid-cols-2 lg:col-start-9 lg:col-span-4 lg:-mt-16 lg:grid lg:gap-6">
             <div className="relative lg:z-20 lg:translate-x-6">
               <div className="overflow-hidden rounded-2xl bg-white p-3 shadow-xl">
-                <div
-                  className="h-[160px] w-full rounded-xl bg-cover bg-center grayscale sm:h-[200px]"
-                  style={{ backgroundImage: `url('${lineageImages[1].url}')` }}
-                  role="img"
-                  aria-label={lineageImages[1].alt}
-                />
+                <div className="relative h-[160px] w-full overflow-hidden rounded-xl sm:h-[200px]">
+                  <Image
+                    src={lineageImages[1].url}
+                    alt={lineageImages[1].alt}
+                    fill
+                    quality={80}
+                    sizes="(max-width: 1024px) 50vw, 20vw"
+                    className="object-cover grayscale"
+                  />
+                </div>
               </div>
             </div>
             <div className="relative lg:-ml-10 lg:mt-12">
               <div className="overflow-hidden rounded-2xl bg-white p-3 shadow-xl">
-                <div
-                  className="h-[160px] w-full rounded-xl bg-cover bg-center grayscale sm:h-[200px]"
-                  style={{ backgroundImage: `url('${lineageImages[2].url}')` }}
-                  role="img"
-                  aria-label={lineageImages[2].alt}
-                />
+                <div className="relative h-[160px] w-full overflow-hidden rounded-xl sm:h-[200px]">
+                  <Image
+                    src={lineageImages[2].url}
+                    alt={lineageImages[2].alt}
+                    fill
+                    quality={80}
+                    sizes="(max-width: 1024px) 50vw, 20vw"
+                    className="object-cover grayscale"
+                  />
+                </div>
               </div>
             </div>
           </div>
@@ -97,12 +110,16 @@ export default function LineageSection() {
         <div className="mt-10 grid gap-6 sm:grid-cols-2 lg:hidden">
           {lineageImages.slice(1).map((image) => (
             <div key={image.alt} className="overflow-hidden rounded-2xl bg-white p-3 shadow-xl">
-              <div
-                className="h-[160px] w-full rounded-xl bg-cover bg-center grayscale"
-                style={{ backgroundImage: `url('${image.url}')` }}
-                role="img"
-                aria-label={image.alt}
-              />
+              <div className="relative h-[160px] w-full overflow-hidden rounded-xl">
+                <Image
+                  src={image.url}
+                  alt={image.alt}
+                  fill
+                  quality={80}
+                  sizes="(max-width: 768px) 50vw, 40vw"
+                  className="object-cover grayscale"
+                />
+              </div>
             </div>
           ))}
         </div>

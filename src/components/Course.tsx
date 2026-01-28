@@ -113,7 +113,7 @@ export default function Course() {
               </p>
               <Link
                 href="#"
-                className="mt-8 inline-flex items-center justify-center rounded-full bg-[#FF7043] px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-white shadow-lg shadow-orange-500/40 transition-transform duration-300 hover:-translate-y-1"
+                className="mt-8 inline-flex items-center justify-center rounded-full bg-primary px-8 py-3 text-sm font-semibold uppercase tracking-[0.2em] text-[#FEFCE8] shadow-lg shadow-green-900/25 transition-transform duration-300 hover:-translate-y-1 hover:bg-primary-dark"
               >
                 Learn More
               </Link>

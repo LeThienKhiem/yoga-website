@@ -61,14 +61,14 @@ export default function UpcomingEvents() {
           <div className="flex items-center gap-3">
             <button
               onClick={handlePrev}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-md transition-colors hover:bg-gray-100"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-green-800/20 bg-primary text-[#FEFCE8] shadow-md transition-colors hover:bg-primary-dark"
               aria-label="Scroll left"
             >
               <ChevronLeft size={18} />
             </button>
             <button
               onClick={handleNext}
-              className="flex h-10 w-10 items-center justify-center rounded-full border border-gray-200 bg-white text-gray-700 shadow-md transition-colors hover:bg-gray-100"
+              className="flex h-10 w-10 items-center justify-center rounded-full border border-green-800/20 bg-primary text-[#FEFCE8] shadow-md transition-colors hover:bg-primary-dark"
               aria-label="Scroll right"
             >
               <ChevronRight size={18} />
@@ -103,7 +103,7 @@ export default function UpcomingEvents() {
                     {event.title}
                   </p>
                   <div className="flex items-center justify-end">
-                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[#FF7043] text-white shadow-md">
+                    <span className="inline-flex h-10 w-10 items-center justify-center rounded-full bg-primary text-[#FEFCE8] shadow-md">
                       <ArrowRight size={18} />
                     </span>
                   </div>
