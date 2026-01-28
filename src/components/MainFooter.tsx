@@ -11,7 +11,7 @@ export default function MainFooter() {
       className="relative z-20 flex min-h-[70vh] w-full flex-col justify-end bg-cover bg-center bg-no-repeat text-white"
       style={{
         backgroundImage:
-          "url('https://images.unsplash.com/photo-1470770903676-69b98201ea1c?q=80&w=2600&auto=format&fit=crop')",
+          "url('https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/DSC00803.jpg')",
       }}
     >
       <div className="absolute inset-0 z-0 bg-gradient-to-t from-black/90 via-black/50 to-transparent" />

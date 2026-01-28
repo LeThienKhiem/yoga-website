@@ -10,7 +10,7 @@ const slides = [
     description:
       'Breathe in the cool mountain air and let the pine forests and still lakes restore your spirit.',
     image:
-      'https://cdn.pixabay.com/photo/2017/04/08/22/26/buddhism-2214532_1280.jpg',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/DSC06058.jpg',
     cta: 'Discover Nature',
     note: '*subject to weather condition',
   },

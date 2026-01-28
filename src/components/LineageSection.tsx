@@ -3,11 +3,11 @@ import Link from 'next/link';
 const lineageImages = [
   {
     alt: 'Vintage Indian Swami black and white',
-    url: 'https://cdn.pixabay.com/photo/2022/06/27/08/37/monk-7287041_1280.jpg',
+    url: 'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/ORG_DSC01488.JPG',
   },
   {
     alt: 'Old yoga guru portrait',
-    url: 'https://cdn.pixabay.com/photo/2016/11/22/23/29/meditate-1851165_1280.jpg',
+    url: 'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/_77a9676.jpg',
   },
   {
     alt: 'Historical ashram',

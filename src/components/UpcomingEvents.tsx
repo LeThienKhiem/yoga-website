@@ -9,26 +9,26 @@ const events = [
     title: 'Teacher Training Course',
     date: 'AUGUST 2 - SEPTEMBER 4, 2025',
     image:
-      'https://cdn.pixabay.com/photo/2016/11/23/18/34/woman-1854265_1280.jpg',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/DSCF2242.jpg',
   },
   {
     title: 'Positive Thinking',
     date: 'OCTOBER 10 - OCTOBER 13, 2025',
     image:
-      'https://cdn.pixabay.com/photo/2020/06/29/17/41/meditate-5353620_1280.jpg',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/DSC01826.jpg',
   },
   {
     title: 'Vedanta Meditation',
     date: 'NOVEMBER 5 - NOVEMBER 9, 2025',
     image:
-      'https://www.ananda.org/wp-content/uploads/2011/05/vedanta-meaning-meditation-1500x1000.jpg',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/DSC01748.jpg',
   },
   {
     title: 'Sadhana Intensive',
     date: 'DECEMBER 1 - DECEMBER 7, 2025',
     image:
-      'https://images.unsplash.com/photo-1518611012118-696072aa579a?q=80&w=1200&auto=format&fit=crop',
-  },
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/ANN_8210.jpg',
+  }
 ];
 
 export default function UpcomingEvents() {

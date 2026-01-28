@@ -10,14 +10,14 @@ const courses = [
     title: 'Yoga Vacation',
     description: 'Find your inner peace in Da Lat',
     image:
-      'https://media.cnn.com/api/v1/images/stellar/prod/160415122850-womens-sacred-expression-retreat-in-lake-atitlan-guatemala.jpg?q=w_2954,h_1200,x_0,y_0,c_fill',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Walking/ANN_7698.jpg',
     href: '#',
   },
   {
     title: 'Teacher Training',
     description: 'Gain professional education and certification',
     image:
-      'https://photos.tpn.to/gj/eh/kf/ke/1600x900.jpg',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/_77a7991.jpg',
     href: '#',
   },
   {
@@ -31,21 +31,21 @@ const courses = [
     title: 'Yoga for Holistic Health',
     description: 'Learn healing practices for addressing disease',
     image:
-      'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwK82lis1N1yy79ROkaw2zIvn9yEv5IWf-6w&s',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/DSC02643.jpg',
     href: '#',
   },
   {
     title: 'Short Course',
     description: 'Enjoy a focused learning experience',
     image:
-      'https://trimurtiyoga.com/wp-content/uploads/2024/06/YOGACLASS-75-of-431-scaled-qnnumzi9rwyb2372esgof5go9lq2o7fjfzhch6v87s.jpg',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Walking/ANN_7718.jpg',
     href: '#',
   },
   {
     title: 'Corporate Training',
     description: 'Improve the way you work',
     image:
-      'https://www.yogarenewteachertraining.com/wp-content/uploads/2025/04/yogarenew-app-scaled.jpg',
+      'https://bzzqbhmrbuqtlxsthfze.supabase.co/storage/v1/object/public/Mediating/DSCF2249.jpg',
     href: '#',
   },
 ];
